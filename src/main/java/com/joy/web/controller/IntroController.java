@@ -1,5 +1,6 @@
 package com.joy.web.controller;
 
+
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping(value = "/")
 public class IntroController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(IntroController.class);
@@ -22,10 +24,10 @@ public class IntroController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String intro(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		logger.info("home! The client locale is {}.", locale);
+	@RequestMapping(method = RequestMethod.GET)
+	public String intro(Model model) {
+		logger.info("intro controller");
+		
 		
 	
 		
